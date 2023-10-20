@@ -1,8 +1,14 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'src/config/router/app_router.dart';
+import 'src/core/utils.dart';
 
-void main() => runApp(const EPortrait());
+void main() {
+  GFonts.addLicense();
+
+  runApp(const EPortrait());
+}
 
 class EPortrait extends StatefulWidget {
   const EPortrait({super.key});
@@ -15,6 +21,10 @@ class _EPortraitState extends State<EPortrait> {
   final AppRouter _appRouter = AppRouter();
 
   @override
-  Widget build(final BuildContext context) =>
-      MaterialApp.router(routerConfig: _appRouter.config());
+  Widget build(final BuildContext context) => MaterialApp.router(
+        routerConfig: _appRouter.config(),
+        debugShowCheckedModeBanner: false,
+        theme:
+            ThemeData().copyWith(textTheme: GoogleFonts.margarineTextTheme()),
+      );
 }
