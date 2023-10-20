@@ -15,6 +15,12 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    EmailVerificationRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const EmailVerificationScreen(),
+      );
+    },
     LoginRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -34,6 +40,20 @@ abstract class _$AppRouter extends RootStackRouter {
       );
     },
   };
+}
+
+/// generated route for
+/// [EmailVerificationScreen]
+class EmailVerificationRoute extends PageRouteInfo<void> {
+  const EmailVerificationRoute({List<PageRouteInfo>? children})
+      : super(
+          EmailVerificationRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'EmailVerificationRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for

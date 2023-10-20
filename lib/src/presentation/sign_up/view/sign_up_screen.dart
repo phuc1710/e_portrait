@@ -42,7 +42,11 @@ class SignUpScreen extends StatelessWidget {
                       ),
                     ),
                   ),
-                  MainButton('Create account', () {}),
+                  MainButton(
+                    'Create account',
+                    () async =>
+                        context.router.pushNamed(Routes.emailVerification),
+                  ),
                   Padding(
                     padding:
                         EdgeInsets.symmetric(vertical: MQSize.h(context, .01)),
