@@ -49,7 +49,7 @@ class SignUpScreen extends StatelessWidget {
                       child: TSText('Already have an account?'),
                     ),
                   ),
-                  MainButton('Login', () {}),
+                  SubButton('Login', () {}),
                   SizedBox(height: MQSize.h(context, .15)),
                 ],
               ),
