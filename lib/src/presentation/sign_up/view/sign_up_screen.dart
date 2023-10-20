@@ -22,20 +22,20 @@ class SignUpScreen extends StatelessWidget {
                 children: [
                   Padding(
                     padding: EdgeInsets.only(bottom: MQSize.h(context, .02)),
-                    child: const DSText('Sign up'),
+                    child: const TextDS('Sign up'),
                   ),
-                  const TLText('Account'),
+                  const TextTL('Account'),
                   const Input(),
-                  const TLText('Password'),
+                  const TextTL('Password'),
                   const PasswordInput(),
-                  const TLText('Confirm password'),
+                  const TextTL('Confirm password'),
                   const PasswordInput(),
-                  const TLText('Email'),
+                  const TextTL('Email'),
                   const Input(),
                   CheckBoxRow(
                     child: Padding(
                       padding: EdgeInsets.only(left: MQSize.w(context, .02)),
-                      child: const BLText(
+                      child: const TextBL(
                         // ignore: lines_longer_than_80_chars
                         'i agree to the terms and conditions and the privacy policy',
                       ),
@@ -46,7 +46,7 @@ class SignUpScreen extends StatelessWidget {
                     padding:
                         EdgeInsets.symmetric(vertical: MQSize.h(context, .01)),
                     child: const Center(
-                      child: TSText('Already have an account?'),
+                      child: TextTS('Already have an account?'),
                     ),
                   ),
                   SubButton('Login', () {}),

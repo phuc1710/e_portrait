@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class HSText extends StatelessWidget {
-  const HSText(this._text, {super.key});
+class TextHS extends StatelessWidget {
+  const TextHS(this._text, {super.key});
 
   final String _text;
 

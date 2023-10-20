@@ -23,7 +23,7 @@ class SubButton extends StatelessWidget {
             ),
           ),
           onPressed: _onPressed,
-          child: HSText(_text),
+          child: TextHS(_text),
         ),
       );
 }

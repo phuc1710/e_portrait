@@ -20,11 +20,11 @@ class WelcomeScreen extends StatelessWidget {
               child: Column(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
-                  const DSText('E-Portrait'),
+                  const TextDS('E-Portrait'),
                   Padding(
                     padding:
                         EdgeInsets.symmetric(vertical: MQSize.h(context, .01)),
-                    child: const TMText(
+                    child: const TextTM(
                       'Bring your imagination from scratch to reality',
                     ),
                   ),
@@ -36,7 +36,7 @@ class WelcomeScreen extends StatelessWidget {
                     padding:
                         EdgeInsets.symmetric(vertical: MQSize.h(context, .01)),
                     child: const Center(
-                      child: TSText('Already have an account?'),
+                      child: TextTS('Already have an account?'),
                     ),
                   ),
                   MainButton('Login', () {}),

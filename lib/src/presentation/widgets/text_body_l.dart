@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 
-class BLText extends StatelessWidget {
-  const BLText(this._text, {super.key});
+class TextBL extends StatelessWidget {
+  const TextBL(this._text, {super.key});
 
   final String _text;
 
