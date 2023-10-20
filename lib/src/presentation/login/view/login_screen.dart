@@ -6,8 +6,8 @@ import '../../../core/utils.dart';
 import '../../widgets/widgets.dart';
 
 @RoutePage()
-class SignUpScreen extends StatelessWidget {
-  const SignUpScreen({super.key});
+class LoginScreen extends StatelessWidget {
+  const LoginScreen({super.key});
 
   @override
   Widget build(final BuildContext context) => Material(
@@ -23,38 +23,32 @@ class SignUpScreen extends StatelessWidget {
                 children: [
                   Padding(
                     padding: EdgeInsets.only(bottom: MQSize.h(context, .02)),
-                    child: const TextDS('Sign up'),
+                    child: const TextDS('Login'),
                   ),
                   const TextTL('Account'),
                   const Input(),
                   const TextTL('Password'),
                   const PasswordInput(),
-                  const TextTL('Confirm password'),
-                  const PasswordInput(),
-                  const TextTL('Email'),
-                  const Input(),
-                  CheckBoxRow(
-                    child: Padding(
-                      padding: EdgeInsets.only(left: MQSize.w(context, .02)),
-                      child: const TextBL(
-                        // ignore: lines_longer_than_80_chars
-                        'i agree to the terms and conditions and the privacy policy',
-                      ),
-                    ),
-                  ),
-                  MainButton('Create account', () {}),
+                  MainButton('Login', () {}),
                   Padding(
                     padding:
                         EdgeInsets.symmetric(vertical: MQSize.h(context, .01)),
                     child: const Center(
-                      child: TextTS('Already have an account?'),
+                      child: TextTS("Don't have an account?"),
                     ),
                   ),
                   SubButton(
-                    'Login',
-                    () async => context.router.replaceNamed(Routes.logIn),
+                    'Sign up',
+                    () async => context.router.replaceNamed(Routes.signUp),
                   ),
-                  SizedBox(height: MQSize.h(context, .15)),
+                  Padding(
+                    padding:
+                        EdgeInsets.symmetric(vertical: MQSize.h(context, .01)),
+                    child: const Center(
+                      child: TextTS('Forget account/password?'),
+                    ),
+                  ),
+                  SizedBox(height: MQSize.h(context, .1)),
                 ],
               ),
             ),

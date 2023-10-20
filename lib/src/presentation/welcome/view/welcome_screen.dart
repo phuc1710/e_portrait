@@ -39,7 +39,10 @@ class WelcomeScreen extends StatelessWidget {
                       child: TextTS('Already have an account?'),
                     ),
                   ),
-                  MainButton('Login', () {}),
+                  MainButton(
+                    'Login',
+                    () async => context.router.pushNamed(Routes.logIn),
+                  ),
                   SizedBox(height: MQSize.h(context, .15)),
                 ],
               ),
