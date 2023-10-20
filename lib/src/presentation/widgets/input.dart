@@ -10,6 +10,7 @@ class Input extends StatelessWidget {
         decoration: BoxDecoration(
           border: Border.all(),
           borderRadius: BorderRadius.circular(10),
+          color: Colors.white,
         ),
         margin: EdgeInsets.symmetric(vertical: MQSize.h(context, .01)),
         padding: const EdgeInsets.all(4),
