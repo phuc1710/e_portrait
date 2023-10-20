@@ -14,7 +14,7 @@ class MainButton extends StatelessWidget {
         padding: EdgeInsets.symmetric(vertical: MQSize.h(context, .01)),
         child: ElevatedButton(
           style: ElevatedButton.styleFrom(
-            backgroundColor: const Color(0xff90dbd6),
+            backgroundColor: Theme.of(context).primaryColor,
             elevation: 2,
             minimumSize: Size(MQSize.w(context, .8), MQSize.h(context, .0625)),
             shape: RoundedRectangleBorder(

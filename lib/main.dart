@@ -24,7 +24,9 @@ class _EPortraitState extends State<EPortrait> {
   Widget build(final BuildContext context) => MaterialApp.router(
         routerConfig: _appRouter.config(),
         debugShowCheckedModeBanner: false,
-        theme:
-            ThemeData().copyWith(textTheme: GoogleFonts.margarineTextTheme()),
+        theme: ThemeData().copyWith(
+          primaryColor: const Color(0xff90dbd6),
+          textTheme: GoogleFonts.margarineTextTheme(),
+        ),
       );
 }
