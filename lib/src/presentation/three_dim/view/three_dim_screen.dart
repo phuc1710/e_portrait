@@ -32,8 +32,7 @@ class _ThreeDimScreenState extends State<ThreeDimScreen> {
   Widget build(final BuildContext context) => Material(
         child: Stack(
           children: [
-            // TODO(phucndh): replace this container by image
-            Container(color: Colors.black12),
+            const AnimatedBG(),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: MQSize.w(context, .05)),
               child: ListView(

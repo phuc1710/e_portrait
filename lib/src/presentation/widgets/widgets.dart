@@ -1,3 +1,4 @@
+export 'animated_bg.dart';
 export 'bg_card.dart';
 export 'checkbox_row.dart';
 export 'input.dart';

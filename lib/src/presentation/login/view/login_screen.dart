@@ -14,8 +14,7 @@ class LoginScreen extends StatelessWidget {
   Widget build(final BuildContext context) => Material(
         child: Stack(
           children: [
-            // TODO(phucndh): replace this container by image
-            Container(color: Colors.black12),
+            const AnimatedBG(),
             Padding(
               padding: EdgeInsets.symmetric(horizontal: MQSize.w(context, .1)),
               child: Column(
