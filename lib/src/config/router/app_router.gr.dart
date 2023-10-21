@@ -15,6 +15,12 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    CategoryNavRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const CategoryNavScreen(),
+      );
+    },
     EmailVerificationRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -51,6 +57,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const SignUpScreen(),
       );
     },
+    ThreeDimRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const ThreeDimScreen(),
+      );
+    },
     WelcomeRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -58,6 +70,20 @@ abstract class _$AppRouter extends RootStackRouter {
       );
     },
   };
+}
+
+/// generated route for
+/// [CategoryNavScreen]
+class CategoryNavRoute extends PageRouteInfo<void> {
+  const CategoryNavRoute({List<PageRouteInfo>? children})
+      : super(
+          CategoryNavRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'CategoryNavRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for
@@ -140,6 +166,20 @@ class SignUpRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'SignUpRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [ThreeDimScreen]
+class ThreeDimRoute extends PageRouteInfo<void> {
+  const ThreeDimRoute({List<PageRouteInfo>? children})
+      : super(
+          ThreeDimRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'ThreeDimRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }

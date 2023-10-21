@@ -12,7 +12,6 @@ void main() {
 
 class EPortrait extends StatefulWidget {
   const EPortrait({super.key});
-
   @override
   State<EPortrait> createState() => _EPortraitState();
 }
@@ -26,7 +25,13 @@ class _EPortraitState extends State<EPortrait> {
         debugShowCheckedModeBanner: false,
         theme: ThemeData().copyWith(
           primaryColor: const Color(0xff90dbd6),
-          textTheme: GoogleFonts.margarineTextTheme(),
+          textTheme: GoogleFonts.margarineTextTheme().copyWith(
+            labelSmall: GoogleFonts.margarine(
+              fontSize: 10,
+              color: Colors.grey[700],
+              letterSpacing: 0.1,
+            ),
+          ),
         ),
       );
 }

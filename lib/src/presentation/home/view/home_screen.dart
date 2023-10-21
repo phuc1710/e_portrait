@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
+import '../../../config/router/routes.dart';
 import '../../../core/utils.dart';
 import '../../widgets/widgets.dart';
 import '../widgets/widgets.dart';
@@ -64,13 +65,16 @@ class _HomeScreenState extends State<HomeScreen> {
                         horizontal: MQSize.w(context, .02),
                         vertical: MQSize.h(context, .01),
                       ),
-                      child: const Column(
+                      child: Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: [
-                          TextHS('Categories'),
-                          Category('Three-dimensional (3D)'),
-                          Category('Semi-real'),
-                          Category('Anime/Cartoon'),
+                          const TextHS('Categories'),
+                          Category(
+                            'Three-dimensional (3D)',
+                            () async => context.router.pushNamed(Routes.threeD),
+                          ),
+                          Category('Semi-real', () {}),
+                          Category('Anime/Cartoon', () {}),
                         ],
                       ),
                     ),

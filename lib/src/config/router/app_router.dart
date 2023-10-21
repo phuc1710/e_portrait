@@ -1,11 +1,13 @@
 import 'package:auto_route/auto_route.dart';
 
 import '../../presentation/email_verification/view/email_verification_screen.dart';
+import '../../presentation/home/view/category_nav_screen.dart';
 import '../../presentation/home/view/home_screen.dart';
 import '../../presentation/login/view/login_screen.dart';
 import '../../presentation/main/view/main_screen.dart';
 import '../../presentation/profile/view/profile_view.dart';
 import '../../presentation/sign_up/view/sign_up_screen.dart';
+import '../../presentation/three_dim/view/three_dim_screen.dart';
 import '../../presentation/welcome/view/welcome_screen.dart';
 import 'routes.dart';
 
@@ -26,7 +28,17 @@ class AppRouter extends _$AppRouter {
           page: MainRoute.page,
           path: Routes.main,
           children: [
-            AutoRoute(page: HomeRoute.page, path: Routes.home),
+            AutoRoute(
+              page: CategoryNavRoute.page,
+              children: [
+                AutoRoute(
+                  page: HomeRoute.page,
+                  path: '',
+                  initial: true,
+                ),
+                AutoRoute(page: ThreeDimRoute.page, path: Routes.threeD),
+              ],
+            ),
             AutoRoute(page: ProfileRoute.page, path: Routes.profile),
           ],
         ),
