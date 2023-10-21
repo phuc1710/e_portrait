@@ -73,8 +73,15 @@ class _HomeScreenState extends State<HomeScreen> {
                             'Three-dimensional (3D)',
                             () async => context.router.pushNamed(Routes.threeD),
                           ),
-                          Category('Semi-real', () {}),
-                          Category('Anime/Cartoon', () {}),
+                          Category(
+                            'Semi-real',
+                            () async =>
+                                context.router.pushNamed(Routes.semiReal),
+                          ),
+                          Category(
+                            'Anime/Cartoon',
+                            () async => context.router.pushNamed(Routes.anime),
+                          ),
                         ],
                       ),
                     ),

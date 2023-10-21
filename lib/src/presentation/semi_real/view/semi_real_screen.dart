@@ -5,14 +5,14 @@ import '../../../core/utils.dart';
 import '../../widgets/widgets.dart';
 
 @RoutePage()
-class ThreeDimScreen extends StatefulWidget {
-  const ThreeDimScreen({super.key});
+class SemiRealScreen extends StatefulWidget {
+  const SemiRealScreen({super.key});
 
   @override
-  State<ThreeDimScreen> createState() => _ThreeDimScreenState();
+  State<SemiRealScreen> createState() => _SemiRealScreenState();
 }
 
-class _ThreeDimScreenState extends State<ThreeDimScreen> {
+class _SemiRealScreenState extends State<SemiRealScreen> {
   final controller = PageController();
   final List<MaterialColor> colors = [Colors.red, Colors.green, Colors.blue];
   final List<String> _products = [
@@ -41,7 +41,7 @@ class _ThreeDimScreenState extends State<ThreeDimScreen> {
                   const Search(),
                   SizedBox(height: MQSize.h(context, .01)),
                   ProductGrid(
-                    title: 'Three-dimensional (3D)',
+                    title: 'Semi-real',
                     products: _products,
                     colors: colors,
                   ),

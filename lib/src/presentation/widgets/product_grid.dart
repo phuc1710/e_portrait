@@ -7,17 +7,19 @@ import 'text_title_l.dart';
 
 class ProductGrid extends StatelessWidget {
   const ProductGrid({
+    required this.title,
     required final List<String> products,
     required this.colors,
     super.key,
   }) : _products = products;
 
+  final String title;
   final List<String> _products;
   final List<MaterialColor> colors;
 
   @override
   Widget build(final BuildContext context) => Hero(
-        tag: 'bg_Three-dimensional (3D)',
+        tag: 'bg_$title',
         child: BGCard(
           child: Padding(
             padding: EdgeInsets.symmetric(
@@ -28,7 +30,7 @@ class ProductGrid extends StatelessWidget {
               height: MQSize.h(context, .75),
               child: Column(
                 children: [
-                  const TextTL('Three-dimensional (3D)'),
+                  TextTL(title),
                   Flexible(
                     child: GridView.builder(
                       itemCount: _products.length,

@@ -15,6 +15,12 @@ abstract class _$AppRouter extends RootStackRouter {
 
   @override
   final Map<String, PageFactory> pagesMap = {
+    AnimeRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const AnimeScreen(),
+      );
+    },
     CategoryNavRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -51,6 +57,12 @@ abstract class _$AppRouter extends RootStackRouter {
         child: const ProfileScreen(),
       );
     },
+    SemiRealRoute.name: (routeData) {
+      return AutoRoutePage<dynamic>(
+        routeData: routeData,
+        child: const SemiRealScreen(),
+      );
+    },
     SignUpRoute.name: (routeData) {
       return AutoRoutePage<dynamic>(
         routeData: routeData,
@@ -70,6 +82,20 @@ abstract class _$AppRouter extends RootStackRouter {
       );
     },
   };
+}
+
+/// generated route for
+/// [AnimeScreen]
+class AnimeRoute extends PageRouteInfo<void> {
+  const AnimeRoute({List<PageRouteInfo>? children})
+      : super(
+          AnimeRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'AnimeRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
 }
 
 /// generated route for
@@ -152,6 +178,20 @@ class ProfileRoute extends PageRouteInfo<void> {
         );
 
   static const String name = 'ProfileRoute';
+
+  static const PageInfo<void> page = PageInfo<void>(name);
+}
+
+/// generated route for
+/// [SemiRealScreen]
+class SemiRealRoute extends PageRouteInfo<void> {
+  const SemiRealRoute({List<PageRouteInfo>? children})
+      : super(
+          SemiRealRoute.name,
+          initialChildren: children,
+        );
+
+  static const String name = 'SemiRealRoute';
 
   static const PageInfo<void> page = PageInfo<void>(name);
 }
