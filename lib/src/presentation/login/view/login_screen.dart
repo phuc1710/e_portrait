@@ -1,6 +1,7 @@
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 
+import '../../../config/router/app_router.dart';
 import '../../../config/router/routes.dart';
 import '../../../core/utils.dart';
 import '../../widgets/widgets.dart';
@@ -29,7 +30,13 @@ class LoginScreen extends StatelessWidget {
                   const Input(),
                   const TextTL('Password'),
                   const PasswordInput(),
-                  MainButton('Login', () {}),
+                  MainButton(
+                    'Login',
+                    () async => context.router.pushAndPopUntil(
+                      const MainRoute(),
+                      predicate: (final _) => false,
+                    ),
+                  ),
                   Padding(
                     padding:
                         EdgeInsets.symmetric(vertical: MQSize.h(context, .01)),
